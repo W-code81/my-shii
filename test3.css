@@ -1,0 +1,256 @@
+ * {
+     padding: 0;
+     margin: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-size: 1rem;
+ }
+
+ /* .header {
+     text-align: center;
+     background: white;
+     font-family: centaur;
+ } */
+
+ h1 {
+     font-size: 50px;
+     font-family: centaur;
+     padding: 15px;
+     text-align: center;
+ }
+
+ h2 {
+     color: black;
+     font-family: centaur;
+     font-size: xx-large;
+     text-align: center;
+
+ }
+
+ h3 {
+     text-align: center;
+     color: black;
+     font-family: centaur;
+     font-size: xx-large;
+ }
+
+ h4 {
+     text-align: center;
+     color: black;
+     font-family: centaur;
+     font-size: xx-large;
+ }
+
+ h5 {
+     text-align: center;
+     color: black;
+     font-family: centaur;
+     font-size: xx-large;
+ }
+
+ h6 {
+     text-align: left;
+     color: black;
+     font-family: centaur;
+     font-size: xx-large;
+ }
+
+ p {
+     font-family: centaur;
+     font-size: x-large;
+     color: black;
+
+ }
+
+ table {
+     color: black;
+ }
+
+ .column {
+     float: left;
+     width: 33.33%;
+     padding: 15px;
+ }
+
+ /* Clear floats after the columns */
+ .row:after {
+     content: "";
+     display: table;
+     clear: both;
+ }
+
+ a {
+     text-align: center;
+
+ }
+
+ a:link {
+     color: white;
+     background-color: red;
+     text-decoration: none;
+     padding: 10px;
+     display: inline-block;
+
+ }
+
+ a:visited {
+     color: white;
+     background-color: red;
+     text-decoration: none;
+ }
+
+ a:hover {
+     color: white;
+     background-color: purple;
+     text-decoration: none;
+ }
+
+ a:active {
+     color: white;
+     background-color: red;
+     text-decoration: none;
+ }
+
+ ul.topnav {
+     overflow: hidden;
+     background-color: black;
+     padding: 3px;
+ }
+
+ ul.topnav li {
+     float: right;
+     display: inline;
+ }
+
+ ul.topnav li a.active {
+     display: inline-block;
+     border-radius: 5px;
+     margin: 5px;
+     transition: all 0.3s;
+     cursor: pointer;
+     background-color: rgb(59, 222, 59)
+ }
+
+ ul.topnav li a.active:hover {
+     background-color: rgb(20, 115, 20);
+ }
+
+ /* for animated effect */
+
+ ul.topnav li a.active span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.3s;
+ }
+
+ ul.topnav li a.active span::after {
+     content: '+';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -20px;
+     transition: 0.3;
+ }
+
+ ul.topnav li a.active:hover span {
+     padding-right: 25px;
+ }
+
+ ul.topnav li a.active:hover span::after {
+     opacity: 1;
+     right: 0;
+ }
+
+ /* end for active */
+
+ /* start of animated link for roundlink */
+ ul.topnav li a.roundlink span {
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     transition: 0.3s;
+ }
+
+ ul.topnav li a.roundlink span::after {
+     content: '\00bb';
+     position: absolute;
+     opacity: 0;
+     top: 0;
+     right: -20px;
+     transition: 0.3;
+ }
+
+ ul.topnav li a.roundlink:hover span {
+     padding-right: 25px;
+ }
+
+ ul.topnav li a.roundlink:hover span::after {
+     opacity: 1;
+     right: 0;
+ }
+
+ /* end of animated link for roundlink */
+
+ ul.topnav li.right {
+     float: right;
+ }
+
+ .responsive {
+     max-width: 35%;
+     height: auto;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .responsive img {
+     width: 100%;
+ }
+
+ .roundlink {
+     border-radius: 5px;
+     margin: 5px;
+ }
+
+ #grad {
+     background-image: linear-gradient(rgb(219, 237, 246), white);
+ }
+
+ .logo {
+     color: white;
+     display: inline;
+     font-family: centaur;
+     font-size: xx-large;
+     padding: 2px;
+     margin: 5px;
+ }
+
+
+ /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+ @media screen and (max-width:900px) {
+     .column {
+         width: 100%;
+     }
+
+     .responsive {
+         width: 80%;
+     }
+ }
+
+ /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+ @media screen and (max-width: 400px) {
+     .topnav a {
+         float: none;
+         width: 100%;
+     }
+ }
+
+
+
+ @media only screen and (max-width:500px) {
+     .responsive {
+         width: 90%;
+     }
+ }
